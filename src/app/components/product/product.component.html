@@ -1,0 +1,10 @@
+<a routerLink="{{getProductUrl()}}">
+    <div class="card">
+        <img class="card-image" src="{{product.photo ? product.photo : 'https://images.unsplash.com/photo-1604147706283-d7119b5b822c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'}}" />
+        
+        <h2>{{ product.name }}</h2>
+        <span class="price">${{ product.price }}</span>
+        <p>{{ product.description }}</p>
+        <a routerLink="/suppliers/{{product.supplierId}}"><span class="supplier-span">{{supplier.name}}</span></a>
+    </div>
+</a>

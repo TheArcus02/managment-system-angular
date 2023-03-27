@@ -1,0 +1,15 @@
+<div class="detail-container">
+    <div class="component-header" [style.background]="getClasses()"><h2>{{ supplier.name }}</h2></div>
+    
+    <div class="supplier-items-container" *ngIf="supplier.products?.length">
+        <div class="supplier-items" *ngFor="let item of supplier.products">
+            <app-product [product]="item"></app-product>
+        </div>
+    </div>
+    <div *ngIf="!supplier.products?.length">
+        no products
+    </div>
+   
+    
+
+</div>

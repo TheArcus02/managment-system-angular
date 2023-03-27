@@ -1,0 +1,11 @@
+<td *ngIf='selected==="products"'>{{ item.id }}</td>
+<td *ngIf='selected==="products"'>{{ item.name }}</td>
+<td *ngIf='selected==="products"'>{{ item.price }}</td>
+<td *ngIf='selected==="products"'>{{ item.supplierId }}</td>
+<td *ngIf='selected==="products"'><app-button color="#CE9C06" text="edit"></app-button></td>
+<td *ngIf='selected==="products"'><app-button color="#AC2935" text="delete"></app-button></td>
+
+<td *ngIf='selected==="suppliers"'>{{ item.id }}</td>
+<td *ngIf='selected==="suppliers"'>{{ item.name }}</td>
+<td *ngIf='selected==="suppliers"'><app-button color="#CE9C06" text="edit"></app-button></td>
+<td *ngIf='selected==="suppliers"'><app-button color="#AC2935" text="delete"></app-button></td>

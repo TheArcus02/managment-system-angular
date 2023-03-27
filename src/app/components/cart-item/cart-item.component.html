@@ -1,0 +1,11 @@
+
+<td>{{ item.product.name }}</td>
+<td>${{ item.product.price * item.quantity }}</td>
+<td>
+    <button class="sub-btn" (click)="onDecrement(item.product)" [disabled]="item.quantity === 1"> - </button>
+    {{ item.quantity }}
+    <button class="add-btn" (click)="onIncrement(item.product)"> + </button>
+
+</td>
+<td><app-button color="#AB2330" text="Remove" (btnClick)="onRemove(item.product)"></app-button></td>
+

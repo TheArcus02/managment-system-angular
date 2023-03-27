@@ -1,1 +1,284 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
+
+$navbarColor: #211C52;
+$background: #12101D;
+$cardColor: #4B347A;
+$productDetailColor: #20255C;
+$productDescriptionColor: #131A46;
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background: $background;
+
+    h1,h2,h3,h4,h5,h6{
+        font-family: 'Bebas Neue', cursive;
+        letter-spacing: 0.5px;
+    }
+    
+
+    .btn{
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin: 5px;
+        text-decoration: none;
+        font-size: 15px;
+        cursor: pointer;
+        background: #000;
+        border: none;
+        color: #fff;
+        transition: 0.1s ease-in;
+    }
+    .btn:disabled{
+        opacity: 0.5;
+    }
+    .btn:hover{
+        filter: brightness(1.2);
+    }
+    .btn:disabled:hover{
+        filter: brightness(1);
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+
+    input[type=submit][disabled]{
+        opacity: 0.5;
+        cursor: default;
+    }
+    input{
+        border: none;
+        padding:11px;
+        background: $productDescriptionColor;
+        color: #fff;
+    }
+    input:focus{
+        outline-width:0 ;
+        border-bottom: 1px solid silver; 
+    }
+    input[type=number].ng-invalid,
+    input[type=text].ng-invalid{
+        border-bottom: 1px solid red;
+    }
+    
+    
+    .add-form{
+        margin-top:20px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: flex-start;
+
+        .btn{
+            margin-top: 0;
+            margin-left: 10px;
+            background: #268C3D;
+        }
+        input[type=number]{
+            text-align: center;
+            // width: 100px;
+        }
+        
+    }
+    .form-field{
+        display: flex;
+        flex-direction: column;
+    }
+    .form-error{
+        font-size: 0.8rem;
+        color: red;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+
+    .component-header{
+        width: 100%;
+        height: 200px;
+        font-size: 40px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        background: $navbarColor;
+
+        h2{
+            filter: drop-shadow(0 0 0.1rem #000);
+        }
+    }
+    
+    .products-container, .suppliers-container,.supplier-items-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+       
+    }
+    .card {
+        background: $cardColor;
+        width: 270px;
+        min-height: 400px;
+        margin: 10px;
+        text-align: center;
+        border-radius: 20px;
+        cursor:pointer;
+        transition: 0.2s ease-in;
+
+
+        .card-image{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+    .card:hover{
+        
+        transform: scale(1.02);
+    }
+    .suppliers-container{
+        .card{
+            min-height: 300px;
+        }
+    }
+    .supplier-span{
+        color: #bb5512;
+        font-size: 1.1em;
+        font-weight: bold;
+        transition: 0.2s ease-in;
+        
+    }
+    .supplier-span:hover{
+        color: #a0460b;
+        text-decoration: underline;
+        
+    }
+    
+    .price{
+        padding: 20px 0;
+    }
+
+    .product-detail-container{
+        margin: 20px 10px 0px;
+
+        .container{
+            display: flex;
+            background: $productDetailColor;
+
+            .left-side{
+                width: 50%;
+            
+                .product-detail-photo{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: fill;
+                }
+
+            }
+            .right-side{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                h2{
+                    font-size: 2rem;
+                    margin:0;
+                    margin-top: 15px;
+                }
+                h4{
+                    margin:0;
+                }
+                
+                .basic-info{
+                   display: flex;
+                   flex-direction: column;
+                   align-items: center;
+                }
+                
+                
+            }
+        }
+        .description{
+            background: $productDescriptionColor;
+            padding: 30px;
+
+            p{
+                margin: 0;
+            }
+        }
+        
+    }
+
+    table{
+        width: 100%;
+        border-collapse: collapse;
+    }
+    td,th{
+        padding:20px;
+    }
+    th{
+        background-color: $navbarColor;
+    }
+
+    .cart{
+        margin: 20px 10px 0px;
+        text-align: center;
+
+        .container{
+            display: flex;
+            background: $productDetailColor;
+            max-width: 1500px;
+           
+            margin:auto;
+            .left-side{
+                width: 60%;
+            }
+            .right-side{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 40%;
+                background: $cardColor;
+                
+                span{   
+                    font-size: 20px;
+                    padding:15px;
+                }
+                .btn{
+                    margin-top: 20px;
+                    width: 200px;
+                }
+            }
+        }
+        .add-btn,
+        .sub-btn{
+            font-size: 1.01rem;
+            margin: 0 2px;
+            padding:1px 6px;
+            border:none;
+            background: #188899;
+            transition: 0.1s ease-in;
+            border-radius: 20px;
+        }
+        .sub-btn:disabled{
+            opacity: 0.5;
+            
+        }
+        .sub-btn:disabled:hover{
+            filter:brightness(1);
+            cursor:default;
+        }
+
+        .add-btn:hover,
+        .sub-btn:hover{
+            cursor: pointer;
+            filter:brightness(1.1);
+        }
+    }
+    .admin-panel{
+        text-align: center;
+    }
+}
+

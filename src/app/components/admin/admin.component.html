@@ -1,0 +1,26 @@
+<div class="component-header"><h2>Admin panel</h2></div>
+<div class="admin-panel">
+    <div class="left-side">
+        <app-button text="Products" (btnClick)="getProducts()" color="#188899" [disabled]='selected==="products"'></app-button>
+        <app-button text="Suppliers" (btnClick)="getSuppliers()" color="#188899" [disabled]='selected==="suppliers"'></app-button>
+    </div>
+    <div class="right-side">
+        <table>
+            <tr *ngIf='selected==="products"'>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>SupplierId</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr *ngIf='selected==="suppliers"'>
+                <th>ID</th>
+                <th>Name</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr app-admin-item *ngFor="let item of items" [item]="item" [selected]="selected"></tr> 
+        </table>
+    </div>
+</div>

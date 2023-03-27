@@ -1,0 +1,23 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    background: #243168;
+    align-items: center;
+
+    h2{
+        margin-left: 15px;
+    }
+
+    .list{
+        display:flex;
+
+        h3{
+            margin: 0 10px;
+        }
+        h3:hover{
+            transition: 0.2s ease-in-out;
+            color: #5E1C38;
+        }
+    }
+}
+
